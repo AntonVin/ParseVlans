@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtBoxSource1.Text" xml:space="preserve">
+    <value>interface GigabitEthernet1/0/48
+
+description LINK TO TZ-440-A-RT1-WAN
+
+switchport trunk allowed vlan 81,275,277,278,477,485,488,495,496,584,709,751
+
+switchport trunk allowed vlan add 754,809,822,849,909,946,948,949,1190,1309
+
+switchport trunk allowed vlan add 1639,1735,1789,1997,2242,2251,2328,2757
+
+switchport trunk allowed vlan add 2760-2764,2970-2972,2974-2976,3018,3751,4041
+
+switchport mode trunk
+
+switchport nonegotiate
+
+spanning-tree portfast trunk
+
+end</value>
+  </data>
+  <data name="txtBoxSource2.Text" xml:space="preserve">
+    <value>TZ-440-A-SW-CORE#sh vlan brief
+
+ 
+
+VLAN Name                             Status    Ports
+
+---- -------------------------------- --------- -------------------------------
+
+1    default                          active    Gi1/0/7, Gi1/0/9, Gi1/0/12, Gi1/0/18, Gi1/0/19, Gi1/0/22, Gi1/0/24, Gi1/0/26, Gi1/0/27, Gi1/0/28, Gi1/0/29, Gi1/0/30, Gi1/0/31, Gi1/0/32
+
+                                                Gi1/0/33, Gi1/0/34, Gi1/0/35, Gi1/0/36, Gi1/0/38, Gi1/0/40, Gi1/0/41, Gi1/0/42, Gi1/0/43, Gi1/0/44, Gi1/0/45, Te1/1/5, Te1/1/6, Te1/1/7, Te1/1/8
+
+                                                Gi2/0/7, Gi2/0/9, Gi2/0/12, Gi2/0/17, Gi2/0/18, Gi2/0/19, Gi2/0/22, Gi2/0/23, Gi2/0/24, Gi2/0/25, Gi2/0/26, Gi2/0/27, Gi2/0/28, Gi2/0/29
+
+                                                Gi2/0/30, Gi2/0/31, Gi2/0/32, Gi2/0/33, Gi2/0/34, Gi2/0/35, Gi2/0/36, Gi2/0/38, Gi2/0/40, Gi2/0/41, Gi2/0/42, Gi2/0/43, Gi2/0/44, Te2/1/4
+
+                                                Te2/1/5, Te2/1/6, Te2/1/7, Te2/1/8
+
+7    TSPD_NET-MGMT                    active
+
+8    TSPD_SRV-CONSOLE                 active
+
+13   TSPD_TM-3FLOOR                   active
+
+14   TSPD_TM-4FLOOR                   active
+
+15   TSPD_TM-5FLOOR                   active
+
+50   TSPD_OCHAKOVO_OIK                active
+
+52   TSPD_USERS                       active    Gi1/0/17
+
+53   TSPD_SCADA                       active
+
+54   TSPD_PS-MEK                      active    Gi1/0/13, Gi1/0/14, Gi1/0/15, Gi1/0/16, Gi2/0/13, Gi2/0/14, Gi2/0/15, Gi2/0/16
+
+60   TSPD_SRV-TM                      active    Gi1/0/37, Gi2/0/37
+
+61   TSPD_SRV-INFRA                   active
+
+62   TSPD_SRV-UPDATE                  active
+
+63   TSPD_SRV-TIME                    active    Gi1/0/8, Gi2/0/8
+
+64   TSPD_SRV-MON                     active
+
+65   TSPD_SRV-TERM                    active
+
+67   dmz-sk11                         active
+
+68   Test                             active
+
+69   TSPD_SRV-TM1                     active
+
+70   TSPD_SRV-MGMT                    active    Gi1/0/10, Gi1/0/11, Gi2/0/10, Gi2/0/11
+
+71   TSPD_VMWARE-MGMT                 active
+
+72   TSPD_SRV-NFS                     active
+
+73   TSPD_VMOTION                     active
+
+74   TSPD_VM-SECURITY                 active
+
+75   CRIPTO                           active    Gi1/0/21, Gi1/0/23, Gi1/0/25, Gi2/0/21
+
+77   SC11-WEBMAG                      active
+
+80   TSPD_SECURITY                    active
+
+81   Sloboda_opt                      active    Gi1/0/46
+
+176  KSPD-ACTIVE                      active    Gi2/0/45
+
+200  OCHAKOVO_SYNCOM                  active
+
+275  564_ROJDESTVENO_ABN              active
+
+277  Kolodkino_ABN                    active
+
+278  Mordvinovo_ABN                   active
+
+300  TM_842_Podushkino_1              active
+
+301  TM_189_Uspenskaia_osn            active
+
+477  Sudnikovo_ABN                    active
+
+485  Holstneykovo_ABN                 active
+
+488  Teryevo_ABN                      active
+
+495  Spas_ABN                         active
+
+496  Vvedenskaia_ABN                  active
+
+709  UPLINK_TO_RT                     active
+
+809  UPLINK_TO_RT_VRF_MGMT            active
+
+810  MGMT_4_FLOOR                     active
+
+811  MGMT_SERVERS                     active
+
+822  Rakitino_ABN                     active
+
+849  Lama_ABN                         active
+
+909  UPS_Monitor                      active
+
+999  TSPD_QUARANTINE                  active
+
+1002 fddi-default                     act/unsup
+
+1003 token-ring-default               act/unsup
+
+1004 fddinet-default                  act/unsup
+
+1005 trnet-default                    act/unsup
+
+
+1190 VIPNET-TSPD-OSN                  active
+
+ 
+
+VLAN Name                             Status    Ports
+
+---- -------------------------------- --------- -------------------------------
+
+1191 VIPNET-TSPD-REZ                  active
+
+1309 Suharevo_ABN                     active
+
+1639 Cezarevo_ABN                     active
+
+1735 Severnaia_ABN                    active
+
+1789 Sushkinskaia_ABN                 active
+
+1997 Nikolskaia_ABN                   active
+
+2242 435_POLIANKA_ABN                 active
+
+2251 Kisilevo_ABN                     active
+
+2328 Ostashevo_ABN                    active
+
+2757 Kirilovka_ABN                    active
+
+2760 Filatovo_ABN                     active
+
+2761 Shishkovo_ABN                    active
+
+2762 Volochanovo_ABN                  active
+
+2763 Karpovka_ABN                     active
+
+2764 Kojino_ABN                       active
+
+2970 Shelkovka_ABN                    active
+
+2971 Uspenskaia_ABN                   active
+
+2972 Anino_ABN                        active
+
+2974 Sichi_ABN                        active
+
+2975 Pernatovo_ABN                    active
+
+2976 Solovievo_ABN                    active
+
+3018 Kamenskaia_ABN                   active
+
+3751 Gliadkovskaia_ABN                active
+
+4041 Fedosino_ABN                     active
+
+TZ-440-A-SW-CORE#</value>
+  </data>
+</root>
