@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParseVlans
 {
-    internal class Vlan
+    public class Vlan
     {
         public string Name { get; }
         public string Number { get; }

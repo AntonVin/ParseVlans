@@ -7,19 +7,11 @@ using System.Text.RegularExpressions;
 
 namespace ParseVlans
 {
-    public class ExtractorNumbersVlans
+    static public class ExtractorNumbersVlans
     {
-        List<string> numbersVlans;
-        public List<string> NumbersVlans =>numbersVlans;
-
-        public ExtractorNumbersVlans(string txtNumbersVlans)
+        public static List<string> GetNumbersVlans(string txtNumbersVlans)
         {
-            this.numbersVlans = new List<string>();
-            SetNumbersVlans(txtNumbersVlans);
-        }
-
-        private void SetNumbersVlans(string txtNumbersVlans)
-        {
+            var lstNumbersVlans = new List<string>();
             string pattern = @"vlan\s(add)?\s?([0-9,-]+)";
             Match match = Regex.Match(txtNumbersVlans, pattern);
             while (match.Success)
@@ -31,13 +23,12 @@ namespace ParseVlans
                     {
                         int[] vlansInRecord = record.Split('-').Select(int.Parse).ToArray();
                         for (int i = vlansInRecord[0]; i <= vlansInRecord[1]; i++)
-                            this.numbersVlans.Add(i.ToString());
+                            lstNumbersVlans.Add(i.ToString());
                     }
-                    else this.numbersVlans.Add(record);
+                    else lstNumbersVlans.Add(record);
                 match = match.NextMatch();
             }
+            return lstNumbersVlans;         
         }
-
-
     }
 }

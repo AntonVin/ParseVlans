@@ -6,25 +6,20 @@ using System.Threading.Tasks;
 
 namespace ParseVlans
 {
-    internal class GeneratorListVlans
+    public static class GeneratorListVlans
     {
-        List<Vlan> listVlans;
-        public List<Vlan> ListVlans => listVlans;
-        public GeneratorListVlans(ExtractorNumbersVlans extractorNumbersVlans, ExtractorDictionaryVlans extractorDictionaryVlans)
+        public static List<Vlan> GetList(List<string> numbersVlans, Dictionary<string,string> dictVlans)
         {
-            this.listVlans = new List<Vlan>();
-            SetList(extractorNumbersVlans, extractorDictionaryVlans);
-        }
-        public void SetList(ExtractorNumbersVlans extractorNumbersVlans, ExtractorDictionaryVlans extractorDictionaryVlans)
-        {
-            foreach(string number in extractorNumbersVlans.NumbersVlans)
+            var listVlans = new List<Vlan>();
+            foreach (string number in numbersVlans)
             {
                 string nameVlan = null;
-                if (extractorDictionaryVlans.DictionaryVlans.ContainsKey(number))
-                    nameVlan = extractorDictionaryVlans.DictionaryVlans[number];
+                if (dictVlans.ContainsKey(number))
+                    nameVlan = dictVlans[number];
                 Vlan currentVlan = new Vlan(number, nameVlan);
-                this.listVlans.Add(currentVlan);
+                listVlans.Add(currentVlan);
             }
+            return listVlans;
         }
     }
 }
