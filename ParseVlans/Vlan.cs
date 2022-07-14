@@ -8,8 +8,8 @@ namespace ParseVlans
 {
     public class Vlan
     {
-        public string Name { get; }
         public string Number { get; }
+        public string Name { get; }
         public Vlan(string Number,string Name)
         {
             this.Number = Number;

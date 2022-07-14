@@ -22,10 +22,11 @@ namespace ParseVlans
             txtBoxResult.Clear();
             List<string> listNumbers = ExtractorNumbersVlans.GetNumbersVlans(txtBoxSource1.Text);
             Dictionary<string,string> dictVlans = ExtractorDictionaryVlans.GetDictionaryVlans(txtBoxSource2.Text);
-            List<Vlan> listVlans = GeneratorListVlans.GetList(listNumbers,dictVlans).OrderBy(x => int.Parse(x.Number)).ToList();
+            List<Vlan> listVlans = GeneratorListVlans.GetList(listNumbers,dictVlans).OrderBy(x => int.Parse(x.Number)).ToList();//в одну строку лучше не писать?
             foreach (Vlan vlan in listVlans)
             {
-                string name = vlan.Name == null ? "" : (" " + vlan.Name);
+                string name = (vlan.Name == null) ?
+                    "" : (" " + vlan.Name);//запутанно? переделать в  IF ELSE?
                 txtBoxResult.Text += vlan.Number + name + Environment.NewLine;
             }
         }

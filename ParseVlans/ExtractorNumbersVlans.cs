@@ -11,7 +11,7 @@ namespace ParseVlans
     {
         public static List<string> GetNumbersVlans(string txtNumbersVlans)
         {
-            var lstNumbersVlans = new List<string>();
+            var lstOutput = new List<string>();
             string pattern = @"vlan\s(add)?\s?([0-9,-]+)";
             Match match = Regex.Match(txtNumbersVlans, pattern);
             while (match.Success)
@@ -23,12 +23,12 @@ namespace ParseVlans
                     {
                         int[] vlansInRecord = record.Split('-').Select(int.Parse).ToArray();
                         for (int i = vlansInRecord[0]; i <= vlansInRecord[1]; i++)
-                            lstNumbersVlans.Add(i.ToString());
+                            lstOutput.Add(i.ToString());
                     }
-                    else lstNumbersVlans.Add(record);
+                    else lstOutput.Add(record);
                 match = match.NextMatch();
             }
-            return lstNumbersVlans;         
+            return lstOutput;         
         }
     }
 }
