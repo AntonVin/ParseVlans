@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ParseVlans
 {
-    public static class ExtractorDictionaryVlans
+    public class ExtractorDictionaryVlans:IExtractorDictionaryVlans
     {
-        public static Dictionary<string,string> GetDictionaryVlans(string txtDictionaryVlans)
+        public Dictionary<string,string> GetDictionaryVlans(string txtDictionaryVlans)
         {
             var dictOutput = new Dictionary<string,string>();
             string pattern = @"^(\d+)\s+([\w-]+)";

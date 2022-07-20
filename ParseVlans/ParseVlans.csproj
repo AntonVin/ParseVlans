@@ -55,6 +55,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratorListVlans.cs" />
+    <Compile Include="IExtractorDictionaryVlans.cs" />
+    <Compile Include="IExtractorNumbersVlans.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vlan.cs" />

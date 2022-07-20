@@ -28,7 +28,7 @@ namespace ParseVlansTests
                 ["11"] = "TSPD_SRV-CONSOLE"
             };
 
-            Dictionary<string, string> actual = ExtractorDictionaryVlans.GetDictionaryVlans(input);
+            Dictionary<string, string> actual =new  ExtractorDictionaryVlans().GetDictionaryVlans(input);
 
             Assert.Equal(expected, actual);
         }

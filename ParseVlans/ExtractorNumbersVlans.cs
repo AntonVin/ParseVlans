@@ -7,9 +7,9 @@ using System.Text.RegularExpressions;
 
 namespace ParseVlans
 {
-    static public class ExtractorNumbersVlans
+    public class ExtractorNumbersVlans:IExtractorNumbersVlans
     {
-        public static List<string> GetNumbersVlans(string txtNumbersVlans)
+        public List<string> GetNumbersVlans(string txtNumbersVlans)
         {
             var lstOutput = new List<string>();
             string pattern = @"vlan\s(add)?\s?([0-9,-]+)";

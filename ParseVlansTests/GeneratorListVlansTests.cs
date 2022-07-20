@@ -11,25 +11,15 @@ namespace ParseVlansTests
         [Fact]
         public void GetList_SimpleCase()
         {
-            var inputNumbers = new List<string>() { "3","14", "20" };
-            var inputDict = new Dictionary<string, string>
-            {
-                ["3"] = "TSPD_SRV-TERM",
-                ["14"] = "KSPD-ACTIVE",
-                ["20"] = "564_ROJDESTVENO_ABN"
-            };
+            var inputNumbersVlans = new FakeExtractorNumberVlans();
+            var inputDictionaryVlans = new FakeExtractorDictionaryVlans();
 
-            var expected = new List<Vlan>()
-            {
-                new Vlan("3","TSPD_SRV-TERM"),
-                new Vlan("14","KSPD-ACTIVE"),
-                new Vlan("20","564_ROJDESTVENO_ABN")
-            };
-            List<Vlan> actual = GeneratorListVlans.GetList(inputNumbers, inputDict);
+            var expected = @"3 TSPD_SRV-TERM
+14
+20 564_ROJDESTVENO_ABN
+";
 
-            //Assert.Equal(expected,actual);//не работает, а почему?:(
-            Assert.Equal(expected.Select(x=>x.Name), actual.Select(x => x.Name));
-            Assert.Equal(expected.Select(x=>x.Number), actual.Select(x => x.Number));
+            Assert.Equal(expected,new GeneratorListVlans(inputNumbersVlans,inputDictionaryVlans).GetText("fake","fake"));
         }
     }
 }

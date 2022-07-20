@@ -20,15 +20,25 @@ namespace ParseVlans
         private void btnExtract_Click(object sender, EventArgs e)
         {
             txtBoxResult.Clear();
-            List<string> listNumbers = ExtractorNumbersVlans.GetNumbersVlans(txtBoxSource1.Text);
-            Dictionary<string,string> dictVlans = ExtractorDictionaryVlans.GetDictionaryVlans(txtBoxSource2.Text);
-            List<Vlan> listVlans = GeneratorListVlans.GetList(listNumbers,dictVlans).OrderBy(x => int.Parse(x.Number)).ToList();//в одну строку лучше не писать?
-            foreach (Vlan vlan in listVlans)
-            {
-                string name = (vlan.Name == null) ?
-                    "" : (" " + vlan.Name);//запутанно? переделать в  IF ELSE?
-                txtBoxResult.Text += vlan.Number + name + Environment.NewLine;
-            }
+            tabControl1.SelectedIndex = tabControl1.TabPages.Count - 1;
+            txtBoxResult.Text =new GeneratorListVlans(new ExtractorNumbersVlans(), new ExtractorDictionaryVlans()).
+                GetText(txtBoxSource1.Text,txtBoxSource2.Text);
+            //а без интерфейсов так красиво было...Text = GeneratorListVlans.GetText(txt1,txt2)
+        }
+
+        private void btnPageToLeft_Click(object sender, EventArgs e)
+        {
+            int indexLastPage = tabControl1.TabPages.Count-1;
+            tabControl1.SelectedIndex = (tabControl1.SelectedIndex == 0) ?
+                indexLastPage  : (tabControl1.SelectedIndex - 1);
+
+        }
+
+        private void btnPageToRight_Click(object sender, EventArgs e)
+        {
+            int indexLastPage = tabControl1.TabPages.Count - 1;
+            tabControl1.SelectedIndex = (tabControl1.SelectedIndex == indexLastPage) ?
+                0 : (tabControl1.SelectedIndex + 1);
         }
     }
 }
