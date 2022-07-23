@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParseVlans
 {
-    public class GeneratorListVlans
+    public class GeneratorListVlans : IGeneratorListVlans
     {
         private IExtractorNumbersVlans extractorNumbersVlans;
         private IExtractorDictionaryVlans extractorDictionaryVlans;
@@ -17,7 +17,7 @@ namespace ParseVlans
             this.extractorDictionaryVlans = extractorDictionaryVlans;
         }
 
-        public  string GetText(string txtInterface,string txtVlans)
+        public string GetText(string txtInterface, string txtVlans)
         {
             var output = new StringBuilder();
             List<string> listNumbers = this.extractorNumbersVlans.GetNumbersVlans(txtInterface);

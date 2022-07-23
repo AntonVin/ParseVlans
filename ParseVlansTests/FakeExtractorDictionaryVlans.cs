@@ -8,14 +8,15 @@ namespace ParseVlansTests
 {
     public class FakeExtractorDictionaryVlans:IExtractorDictionaryVlans
     {
+        private Dictionary<string, string> dictionaryVlans;
+        public FakeExtractorDictionaryVlans(Dictionary<string, string> dictionaryVlans)
+        {
+            this.dictionaryVlans = dictionaryVlans;
+        }
+
         public Dictionary<string, string> GetDictionaryVlans(string txtVlans)
         {
-            return new Dictionary<string, string>
-            {
-                ["3"] = "TSPD_SRV-TERM",
-                ["15"] = "KSPD-ACTIVE",
-                ["20"] = "564_ROJDESTVENO_ABN"
-            };
+            return this.dictionaryVlans;
         }
     }
 }

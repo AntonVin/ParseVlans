@@ -17,7 +17,8 @@ namespace ParseVlans
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var generatorListVlans = new GeneratorListVlans(new ExtractorNumbersVlans(), new ExtractorDictionaryVlans());
+            Application.Run(new Form1(generatorListVlans));
         }
     }
 }

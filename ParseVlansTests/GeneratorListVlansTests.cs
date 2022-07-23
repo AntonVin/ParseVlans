@@ -9,12 +9,18 @@ namespace ParseVlansTests
     public class GeneratorListVlansTests
     {
         [Fact]
-        public void GetList_SimpleCase()
+        public void GetList_NullNameCase()
         {
-            var inputNumbersVlans = new FakeExtractorNumberVlans();
-            var inputDictionaryVlans = new FakeExtractorDictionaryVlans();
+            var inputNumbersVlans = new FakeExtractorNumberVlans(new List<string>(){"3","14", "20"});
+            var inputDictionaryVlans = new FakeExtractorDictionaryVlans(
+            new Dictionary<string, string>
+            {
+                ["3"] = "TSPD_SRV-TERM",
+                ["15"] = "KSPD-ACTIVE",
+                ["20"] = "564_ROJDESTVENO_ABN"
+            });
 
-            var expected = @"3 TSPD_SRV-TERM
+            string expected = @"3 TSPD_SRV-TERM
 14
 20 564_ROJDESTVENO_ABN
 ";

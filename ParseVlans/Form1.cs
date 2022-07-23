@@ -12,8 +12,10 @@ namespace ParseVlans
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private IGeneratorListVlans generatorListVlans;
+        public Form1(GeneratorListVlans generatorListVlans)
         {
+            this.generatorListVlans = generatorListVlans;
             InitializeComponent();
         }
 
@@ -21,9 +23,7 @@ namespace ParseVlans
         {
             txtBoxResult.Clear();
             tabControl1.SelectedIndex = tabControl1.TabPages.Count - 1;
-            txtBoxResult.Text =new GeneratorListVlans(new ExtractorNumbersVlans(), new ExtractorDictionaryVlans()).
-                GetText(txtBoxSource1.Text,txtBoxSource2.Text);
-            //а без интерфейсов так красиво было...Text = GeneratorListVlans.GetText(txt1,txt2)
+            txtBoxResult.Text = this.generatorListVlans.GetText(txtBoxSource1.Text,txtBoxSource2.Text);
         }
 
         private void btnPageToLeft_Click(object sender, EventArgs e)

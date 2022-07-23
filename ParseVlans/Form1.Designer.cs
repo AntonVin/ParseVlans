@@ -47,7 +47,7 @@
             // 
             // btnExtract
             // 
-            this.btnExtract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExtract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnExtract.Location = new System.Drawing.Point(241, 389);
             this.btnExtract.Name = "btnExtract";
@@ -79,7 +79,7 @@
             this.txtBoxSource2.Multiline = true;
             this.txtBoxSource2.Name = "txtBoxSource2";
             this.txtBoxSource2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBoxSource2.Size = new System.Drawing.Size(1039, 623);
+            this.txtBoxSource2.Size = new System.Drawing.Size(906, 339);
             this.txtBoxSource2.TabIndex = 2;
             this.txtBoxSource2.Text = resources.GetString("txtBoxSource2.Text");
             // 
@@ -116,7 +116,7 @@
             this.tabPageInterface.Location = new System.Drawing.Point(4, 22);
             this.tabPageInterface.Name = "tabPageInterface";
             this.tabPageInterface.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInterface.Size = new System.Drawing.Size(1045, 629);
+            this.tabPageInterface.Size = new System.Drawing.Size(912, 345);
             this.tabPageInterface.TabIndex = 1;
             this.tabPageInterface.Text = "Интерфейс";
             this.tabPageInterface.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.tabPageVLAN.Location = new System.Drawing.Point(4, 22);
             this.tabPageVLAN.Name = "tabPageVLAN";
             this.tabPageVLAN.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVLAN.Size = new System.Drawing.Size(1045, 629);
+            this.tabPageVLAN.Size = new System.Drawing.Size(912, 345);
             this.tabPageVLAN.TabIndex = 0;
             this.tabPageVLAN.Text = "VLANS";
             // 
@@ -147,7 +147,7 @@
             // 
             // btnPageToLeft
             // 
-            this.btnPageToLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPageToLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPageToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPageToLeft.Location = new System.Drawing.Point(0, 389);
             this.btnPageToLeft.Name = "btnPageToLeft";
@@ -159,7 +159,7 @@
             // 
             // btnPageToRight
             // 
-            this.btnPageToRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPageToRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPageToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPageToRight.Location = new System.Drawing.Point(120, 389);
             this.btnPageToRight.Name = "btnPageToRight";
@@ -178,7 +178,7 @@
             this.Controls.Add(this.btnPageToLeft);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnExtract);
-            this.MinimumSize = new System.Drawing.Size(960, 200);
+            this.MinimumSize = new System.Drawing.Size(800, 200);
             this.Name = "Form1";
             this.Text = "Работа с VLANS";
             this.tabControl1.ResumeLayout(false);

@@ -8,9 +8,15 @@ namespace ParseVlansTests
 {
     public class FakeExtractorNumberVlans:IExtractorNumbersVlans
     {
-        public List<string> GetNumbersVlans(string txtNumbersVlans)
+        private List<string> listNumbersVlans;
+        public FakeExtractorNumberVlans(List<string> listNumbersVlans)
         {
-            return new List<string>(){"3","14", "20"};
+            this.listNumbersVlans = listNumbersVlans;
+        }
+
+        public List<string> GetNumbersVlans(string txtNumberVlans)
+        {
+            return this.listNumbersVlans;
         }
     }
 }
